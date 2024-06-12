@@ -1,0 +1,24 @@
+@media (max-width:768px) {
+  #second_colum {
+    padding-top: 190px;
+  }
+}
+
+@media (max-width:360px) {
+  #second_colum {
+    padding-top: 324px;
+  }
+}
+
+@media (max-width:420px) {
+  #second_colum {
+    padding-top: 320px;
+  }
+}
+
+@media (max-width:991px) {
+  #second_colum {
+    padding-top: 186px;
+  }
+}
+

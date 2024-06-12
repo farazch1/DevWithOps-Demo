@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>DevWithOps (copy)</title>
+    <link rel="stylesheet" href='\static\bootstrap\css\bootstrap.min.css'>
+    <link rel="stylesheet" href="\static\css\Alata.css">
+    <link rel="stylesheet" href="\static\css\Nunito%20Sans.css">
+    <link rel="stylesheet" href="\static\fonts\ionicons.min.css">
+    <link rel="stylesheet" href="\static\css\animate.min.css">
+    <link rel="stylesheet" href="\static\css\Left-SideMenu.css">
+    <link rel="stylesheet" href="\static\css\Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="\static\css\sidebar-style4.css">
+    <link rel="stylesheet" href="\static\css\sidebar.css">
+    <link rel="stylesheet" href="\static\css\styles.css">
+</head>
+
+<body>
+    <!-- Start: Div_of_ whole_page -->
+    <div class="position-absolute vh-100 w-100">
+        <!-- Start: nav-bar -->
+        <div style="height: 60px;position: fixed;width: 100%;z-index: 9999;padding-top: 0px;">
+            <!-- Start: Navbar With Button -->
+            <nav class="navbar navbar-expand-md py-2 position-inherit navbar-light" id="whole_nav" style="margin: 0px;margin-left: 0px;padding-left: 0px;">
+                <div class="container"><a class="navbar-brand d-flex align-items-center" href="{{ url_for('hello_world') }}"><span><img src="\static\img\brand-logo.png" width="48" height="24" style="margin-right: 7px;"></span><span style="font-family: Alata, sans-serif;font-weight: bold;">DevWithOps</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1" style="font-family: 'Nunito Sans', sans-serif;">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a class="nav-link" href="{{ url_for('dashboard') }}" style="font-family: Alata, sans-serif;">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url_for('learn') }}" style="font-family: Alata, sans-serif;">&nbsp;Learn</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url_for('compete') }}" style="font-family: Alata, sans-serif;">Compete</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url_for('other') }}" style="font-family: Alata, sans-serif;">Other</a></li>
+                        </ul>
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link">{{ current_user.username }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('log_out') }}">Logout</a>
+                </li>
+            </ul>
+{#                        <ul class="navbar-nav justify-content-end">#}
+{#                            <li class="nav-item"><a class="nav-link" href="#" style="margin-right: 4px;font-family: Alata, sans-serif;" action="/login">Login</a></li>#}
+{#                            <li><a href=" url_for('sign_up')"><button class="btn btn-primary" type="button" style="background-color: #25AAE2;font-family: Alata, sans-serif;">Sign Up</button></a></li>#}
+{#                               <form action="#">#}
+{#        <button class="btn btn-primary" type="submit" style="background-color: #25AAE2;font-family: Alata, sans-serif;">Sign Up</button>#}
+{#    </form>#}
+{#                        </ul>#}
+                    </div>
+                </div>
+            </nav><!-- End: Navbar With Button -->
+        </div><!-- End: nav-bar -->
+        <!-- Start: below-navbar -->
+        <div style="height: 100vh;width: 100%;margin-top: 0px;">
+            <!-- Start: side-bar -->
+            <div style="position: fixed;left: 0;top: 57px;width: 100px;z-index: 1000;font-family: 'Nunito Sans', sans-serif;margin-left: -3px;">
+                <!-- Start: extra_div -->
+                <div style="width: 96px;margin: 3px;padding: 0px;font-family: 'Nunito Sans', sans-serif;background-color: #efefef;clear: left;height: 100vh;">
+                    <!-- Start: My Learning --><a class="text-center list-group-item list-group-item-action" href="{{ url_for('my_learning') }}" style="height: 80px;margin-left: -3px;margin-top: -3px;padding-top: 4px;width: 98px;">
+                        <div style="height: 46px;width: 61px;margin-left: 19px;filter: invert(0%);"><img id="side_images" src="\static\img\learning.png" style="width: 60px;height: 46px;margin-right: 0px;margin-left: -2px;" width="61" height="46"></div><span class="text-xs font-semibold tracking-wide dark:text-dark-contrastText" style="margin: auto;margin-left: 0px;font-size: 13px;font-family: Alata, sans-serif;">My Learning</span>
+                    </a><!-- End: My Learning -->
+                    <!-- Start: Explore --><a class="text-center list-group-item list-group-item-action" href="{{ url_for('explore') }}" style="height: 80px;margin: auto;margin-left: -3px;margin-top: 4px;padding-top: 9px;width: 98px;">
+                        <div style="height: 36px;width: 61px;margin-left: 19px;"><img class="side_images" src="\static\img\explore2.png" style="width: 29px;height: 30px;margin-right: 0px;"></div><span class="text-xs font-semibold tracking-wide dark:text-dark-contrastText" style="margin: auto;margin-left: 0px;font-size: 13px;font-family: Alata, sans-serif;">Explore</span>
+                    </a><!-- End: Explore -->
+                    <!-- Start: CloudLabs --><a class="text-center list-group-item list-group-item-action" href="{{ url_for('cloudlabs') }}" style="height: 80px;margin-left: -3px;margin-top: 4px;padding-top: 4px;width: 98px;">
+                        <div style="height: 46px;width: 61px;margin-left: 19px;"><img class="side_images" src="\static\img\cloudspace.png" style="width: 61px;height: 46px;margin-right: 0px;" width="61" height="46"></div><span class="text-xs font-semibold tracking-wide dark:text-dark-contrastText" style="margin-left: 1px;font-size: 13px;font-family: Alata, sans-serif;">CloudLabs</span>
+                    </a><!-- End: CloudLabs -->
+                    <!-- Start: Personal Paths --><a class="text-center list-group-item list-group-item-action" href="{{ url_for('p_paths') }}" style="height: 80px;margin-left: -3px;margin-top: 4px;padding-top: 4px;width: 98px;">
+                        <div style="height: 46px;width: 61px;margin-left: 19px;"><img class="side_images" src="\static\img\personalpaths.png" style="width: 41px;height: 46px;margin-right: 7px;padding-right: 0px;filter: invert(0%);" width="61" height="46"></div><span class="text-xs font-semibold tracking-wide dark:text-dark-contrastText" style="margin-left: 0px;font-size: 13px;font-family: Alata, sans-serif;width: 88px;">Personal Paths</span>
+                    </a><!-- End: Personal Paths -->
+                    <!-- Start: Projects --><a class="text-center list-group-item list-group-item-action" href="{{ url_for('projects') }}" style="height: 80px;margin-left: -3px;margin-top: 4px;padding-top: 4px;width: 98px;">
+                        <div style="height: 46px;width: 61px;margin-left: 19px;"><img class="side_images" src="\static\img\projects.png" style="width: 48px;height: 46px;margin-right: 0px;" width="61" height="46"></div><span class="text-xs font-semibold tracking-wide dark:text-dark-contrastText" style="margin-left: 0px;font-size: 13px;font-family: Alata, sans-serif;">Projects</span>
+                    </a><!-- End: Projects -->
+                    <!-- Start: Skill Paths --><a class="text-center list-group-item list-group-item-action" href="{{ url_for('s_paths') }}" style="height: 80px;margin-left: -3px;margin-top: 4px;padding-top: 4px;width: 98px;">
+                        <div style="height: 46px;width: 61px;margin-left: 19px;"><img class="side_images" src="\static\img\skillpaths.png" style="width: 41px;height: 41px;margin-right: 0px;margin-top: 3px;" width="61" height="46"></div><span class="text-xs font-semibold tracking-wide dark:text-dark-contrastText" style="margin-left: 0px;font-size: 13px;font-family: Alata, sans-serif;">Skill Paths</span>
+                    </a><!-- End: Skill Paths -->
+                    <!-- Start: Assessments --><a class="text-center list-group-item list-group-item-action" href="{{ url_for('assessment') }}" style="height: 80px;margin-left: -3px;margin-top: 4px;padding-top: 4px;width: 98px;">
+                        <div style="height: 46px;width: 61px;margin-left: 19px;"><img class="side_images" src="\static\img\assessment.png" style="width: 42px;height: 43px;margin-right: 0px;margin-top: 2px;" width="61" height="46"></div><span class="text-xs font-semibold tracking-wide dark:text-dark-contrastText" style="margin-left: 0px;font-size: 13px;font-family: Alata, sans-serif;">Assessments</span>
+                    </a><!-- End: Assessments -->
+                </div><!-- End: extra_div -->
+            </div><!-- End: side-bar -->
+            <!-- Start: content-area -->
+            <div style="height: 100%;left: 100px;bottom: 0;right: 0;margin-left: 0px;margin-top: 0px;position: absolute;">
+                <!-- Start: Heading_which_states_"welcome mouazz" -->
+                <h3 >Welcome&nbsp;<span style="color: #25AAE2;">Syed Mouaaz</span>,get started on your DevOps journey</h3>
+                {% if current_user.is_authenticated %}
+                    <h3 class="text-center" style="font-size: 25px;font-family: Alata, sans-serif;width: 100%;margin-bottom: 50px;margin-top: 90px;position: static;height: 10%;">Welcome, {{ (current_user.username).title() }}, get started on your DevOps journey</h3>
+                {% else %}
+                    <h3 class="text-center" style="font-size: 25px;font-family: Alata, sans-serif;width: 100%;margin-bottom: 50px;margin-top: 90px;position: static;height: 10%;"><a href="{{ url_for('sign_up') }}">SignUp & get started on your DevOps journey</a></h3>
+                    <h4 class="text-center" style="font-size: 25px;font-family: Alata, sans-serif;width: 100%;margin-bottom: 50px;margin-top: 90px;position: static;height: 10%;"><a href="{{ url_for('login') }}">Already have an account?? LogIn</a></h4>
+                {% endif %}
+                <!-- End: Heading_which_states_"welcome mouazz" -->
+                <!-- Start: area_under_heading -->
+                <div style="height: 100%;margin-top: 0px;position: relative;">
+                    <!-- Start: area_of_courses_links -->
+                    <div style="height: 400px;width: 90%;margin-left: 60px;">
+                        <!-- Start: extra_div -->
+                        <div class="flex-grow-1 flex-shrink-1 text-center" style="height: 100%;">
+                            <!-- Start: upper_group_of_3_courses -->
+                            <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-2" style="width: 100%;margin-left: 0px;margin-right: 0px;margin-top: 0px;height: 50%;padding-bottom: 15px;padding-left: 0px;">
+                                <!-- Start: first_course --><a href="{{ url_for('Azure') }}">
+                                    <div data-bss-hover-animate="pulse" class="col" style="padding-right: 8px;padding-left: 8px;">
+                                        <div style="background-color: #89BACB;width: 100%;padding: 0px;height: 70%;border: 1px solid gray;padding-bottom: 134px;border-top-left-radius: 14px;border-top-right-radius: 14px;"></div>
+                                        <div class="d-lg-flex align-items-lg-center" style="width: 100%;height: 30%;border: 1px solid gray;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">
+                                            <!-- Start: 1 Row 2 Columns -->
+                                            <div class="container">
+                                                <div class="row d-lg-flex align-items-lg-center" style="height: 100%;">
+                                                    <div class="col-md-6" style="height: 100%;width: 20%;text-align: center;"><i class="icon ion-arrow-right-b" style="color: #25AAE2;font-size: 26px;"></i></div>
+                                                    <div class="col-md-6" style="height: 100%;width: 80%;text-align: left;"><span style="font-family: Alata, sans-serif;color: #656464;font-size: 15px;">Get started with Azure</span></div>
+                                                </div>
+                                            </div><!-- End: 1 Row 2 Columns -->
+                                        </div>
+                                    </div>
+                                </a><!-- End: first_course -->
+                                <!-- Start: second_course --><a href="{{ url_for('Linux') }}">
+                                    <div data-bss-hover-animate="pulse" class="col" style="padding-right: 8px;padding-left: 8px;">
+                                        <div style="background-color: #72C7A6;width: 100%;padding: 0px;height: 70%;border: 1px solid gray;padding-bottom: 134px;border-top-left-radius: 14px;border-top-right-radius: 14px;"></div>
+                                        <div class="d-lg-flex align-items-lg-center" style="width: 100%;height: 30%;border: 1px solid gray;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">
+                                            <!-- Start: 1 Row 2 Columns -->
+                                            <div class="container">
+                                                <div class="row d-lg-flex align-items-lg-center" style="height: 100%;">
+                                                    <div class="col-md-6" style="height: 100%;width: 20%;text-align: center;"><i class="icon ion-arrow-right-b" style="color: #25AAE2;font-size: 26px;"></i></div>
+                                                    <div class="col-md-6" style="height: 100%;width: 80%;text-align: left;padding-left: 21px;"><span style="font-family: Alata, sans-serif;color: #656464;font-size: 15px;">Basics of Linux</span></div>
+                                                </div>
+                                            </div><!-- End: 1 Row 2 Columns -->
+                                        </div>
+                                    </div>
+                                </a><!-- End: second_course -->
+                                <!-- Start: third course --><a href="{{ url_for('EC2') }}">
+                                    <div data-bss-hover-animate="pulse" class="col" style="padding-right: 8px;padding-left: 8px;">
+                                        <div style="background-color: #CAD18B;width: 100%;padding: 0px;height: 70%;border: 1px solid gray;padding-bottom: 134px;border-top-left-radius: 14px;border-top-right-radius: 14px;"></div>
+                                        <div class="d-lg-flex align-items-lg-center" style="width: 100%;height: 30%;border: 1px solid gray;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">
+                                            <!-- Start: 1 Row 2 Columns -->
+                                            <div class="container">
+                                                <div class="row d-lg-flex align-items-lg-center" style="height: 100%;">
+                                                    <div class="col-md-6" style="height: 100%;width: 20%;text-align: center;"><i class="icon ion-arrow-right-b" style="color: #25AAE2;font-size: 26px;"></i></div>
+                                                    <div class="col-md-6" style="height: 100%;width: 80%;text-align: left;"><span style="font-family: Alata, sans-serif;color: #656464;font-size: 15px;">Introduction to ECC</span></div>
+                                                </div>
+                                            </div><!-- End: 1 Row 2 Columns -->
+                                        </div>
+                                    </div>
+                                </a><!-- End: third course -->
+                            </div><!-- End: upper_group_of_3_courses -->
+                            <!-- Start: lower_group_of_3_courses -->
+                            <div class="flex-wrap my-auto row row-cols-2 row-cols-lg-3 g-2 g-lg-2 memm" id="second_colum" style="width: 100%;margin-left: 0px;margin-right: 0px;height: 50%;padding-bottom: 15px;padding-left: 0px;">
+                                <!-- Start: fourth course --><a href="#">
+                                    <div data-bss-hover-animate="pulse" class="col" style="padding-right: 8px;padding-left: 8px;">
+                                        <div style="background-color: #E57778;width: 100%;padding: 0px;height: 70%;border: 1px solid gray;padding-bottom: 134px;border-top-left-radius: 14px;border-top-right-radius: 14px;"></div>
+                                        <div class="d-lg-flex align-items-lg-center" style="width: 100%;height: 30%;border: 1px solid gray;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">
+                                            <!-- Start: 1 Row 2 Columns -->
+                                            <div class="container">
+                                                <div class="row d-lg-flex align-items-lg-center" style="height: 100%;">
+                                                    <div class="col-md-6" style="height: 100%;width: 20%;text-align: center;"><i class="icon ion-arrow-right-b" style="color: #25AAE2;font-size: 26px;"></i></div>
+                                                    <div class="col-md-6" style="height: 100%;width: 80%;text-align: left;"><span style="font-family: Alata, sans-serif;color: #656464;font-size: 15px;">Get started with Azure</span></div>
+                                                </div>
+                                            </div><!-- End: 1 Row 2 Columns -->
+                                        </div>
+                                    </div>
+                                </a><!-- End: fourth course -->
+                                <!-- Start: fifth_course --><a href="#">
+                                    <div data-bss-hover-animate="pulse" class="col" style="padding-right: 8px;padding-left: 8px;">
+                                        <div style="background-color: #72C9C0;width: 100%;padding: 0px;height: 70%;border: 1px solid gray;padding-bottom: 134px;border-top-left-radius: 14px;border-top-right-radius: 14px;"></div>
+                                        <div class="d-lg-flex align-items-lg-center" style="width: 100%;height: 30%;border: 1px solid gray;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">
+                                            <!-- Start: 1 Row 2 Columns -->
+                                            <div class="container">
+                                                <div class="row d-lg-flex align-items-lg-center" style="height: 100%;">
+                                                    <div class="col-md-6" style="height: 100%;width: 20%;text-align: center;"><i class="icon ion-arrow-right-b" style="color: #25AAE2;font-size: 26px;"></i></div>
+                                                    <div class="col-md-6" style="height: 100%;width: 80%;text-align: left;"><span style="font-family: Alata, sans-serif;color: #656464;font-size: 15px;">Get started with Azure</span></div>
+                                                </div>
+                                            </div><!-- End: 1 Row 2 Columns -->
+                                        </div>
+                                    </div>
+                                </a><!-- End: fifth_course -->
+                                <!-- Start: sixth_course --><a href="#">
+                                    <div data-bss-hover-animate="pulse" class="col" style="padding-right: 8px;padding-left: 8px;">
+                                        <div style="background-color: #89BACB;width: 100%;padding: 0px;height: 70%;border: 1px solid gray;padding-bottom: 134px;border-top-left-radius: 14px;border-top-right-radius: 14px;"></div>
+                                        <div class="d-lg-flex align-items-lg-center" style="width: 100%;height: 30%;border: 1px solid gray;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">
+                                            <!-- Start: 1 Row 2 Columns -->
+                                            <div class="container">
+                                                <div class="row d-lg-flex align-items-lg-center" style="height: 100%;">
+                                                    <div class="col-md-6" style="height: 100%;width: 20%;text-align: center;"><i class="icon ion-arrow-right-b" style="color: #25AAE2;font-size: 26px;"></i></div>
+                                                    <div class="col-md-6" style="height: 100%;width: 80%;text-align: left;"><span style="font-family: Alata, sans-serif;color: #656464;font-size: 15px;">Get started with Azure</span></div>
+                                                </div>
+                                            </div><!-- End: 1 Row 2 Columns -->
+                                        </div>
+                                    </div>
+                                </a><!-- End: sixth_course -->
+                            </div><!-- End: lower_group_of_3_courses -->
+                        </div><!-- End: extra_div -->
+                    </div><!-- End: area_of_courses_links -->
+                </div><!-- End: area_under_heading -->
+            </div><!-- End: content-area -->
+        </div><!-- End: below-navbar -->
+    </div><!-- End: Div_of_ whole_page -->
+    <script src="\static\bootstrap\js\bootstrap.min.js"></script>
+    <script src="\static\js\bs-init.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+@media (max-width:768px) {
+  #second_colum {
+    padding-top: 190px;
+  }
+}
+
+@media (max-width:360px) {
+  #second_colum {
+    padding-top: 324px;
+  }
+}
+
+@media (max-width:420px) {
+  #second_colum {
+    padding-top: 320px;
+  }
+}
+
+@media (max-width:991px) {
+  #second_colum {
+    padding-top: 186px;
+  }
+}
+
+#landing-page-below-navbar {
+  height: 100vh;
+  width: 100%;
+}
+
+#landing_page-div-of-whole-page {
+  background-color: #111B2A;
+}
+
+#landing-page-nav-bar {
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+#landing-page-content-area {
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+}
+
+#landing-page-top-heading {
+  font-size: 35px;
+  width: 50%;
+  font-family: Alata, sans-serif;
+  margin-top: 150px;
+  position: static;
+  height: 8%;
+  color: rgb(255,255,255);
+  text-align: center;
+}
+
+#landing-page-bottom-heading {
+  margin-bottom: 38px;
+  width: 50%;
+  text-align: center;
+  font-family: Alata, sans-serif;
+  font-size: 27px;
+}
+
+#landing-page-area-under-heading {
+  height: 100%;
+  position: relative;
+}
+
+#landing-page-area-of-courses-links {
+  height: 400px;
+  width: 90%;
+  margin-left: 60px;
+}
+
+#landing-page-extra-div {
+  height: 100%;
+}
+
+#landing-page-upper-column-div {
+  width: 100%;
+  height: 50%;
+  padding-bottom: 15px;
+}
+
+#landing-page-rocket-mans-settings {
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-top: -142px;
+}
+
+#landing-page-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 147.913px;
+  background-color: #111B2A !important;
+}
+
+#landing-page-wave-image {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+

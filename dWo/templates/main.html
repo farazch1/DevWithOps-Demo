@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>retry landing-page</title>
+    <link rel="stylesheet" href="\static\bootstrap1\css\bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;display=swap">
+    <link rel="stylesheet" href="\static\css1\animate.min.css">
+    <link rel="stylesheet" href="\static\css1\Left-SideMenu.css">
+    <link rel="stylesheet" href="\static\css1\Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="\static\css1\sidebar-style4.css">
+    <link rel="stylesheet" href="\static\css1\sidebar.css">
+    <link rel="stylesheet" href="\static\css1\styles.css">
+</head>
+
+<body>
+    <div id="landing_page-div-of-whole-page" class="position-absolute vh-100 w-100"><img id="landing-page-star-image" src="\static\img1\star-pattern.svg">
+        <div id="landing-page-nav-bar">
+            <nav class="navbar navbar-expand-md py-2 position-inherit navbar-light" id="whole_nav">
+                <div class="container"><a class="navbar-brand d-flex align-items-center" href="{{ url_for('hello_world') }}"><span><img src="\static\img1\brand-logo.png" width="48" height="24" style="margin-right: 7px;"></span><span style="font-family: Alata, sans-serif;font-weight: bold;color: white;">DevWithOps</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" id="landing-page-nav-bar-toggle"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon" id="landing-page-nav-bar-conjusted"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1" style="font-family: 'Nunito Sans', sans-serif;">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a class="nav-link" href="#" style="font-family: Alata, sans-serif;color: white;">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="font-family: Alata, sans-serif;color: white;">&nbsp;Learn</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="font-family: Alata, sans-serif;color: white;">Compete</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="font-family: Alata, sans-serif;color: white;">Other</a></li>
+                        </ul>
+                        {% if current_user.is_authenticated %}
+                            <ul class="navbar-nav justify-content-end">
+                                <li class="nav-item">
+                                    <li class="nav-item"><a class="nav-link" href="{{ url_for('after_login') }}" style="margin-right: 4px;font-family: Alata, sans-serif;color: white;">{{ current_user.username }}</a></li>
+
+                                </li>
+                                <li class="nav-item">
+                                    <li class="nav-item"><a class="nav-link" href="{{ url_for('log_out') }}" style="margin-right: 4px;font-family: Alata, sans-serif;color: white;">LogOut</a></li>
+
+                                </li>
+                            </ul>
+                        {% else %}
+                            <ul class="navbar-nav justify-content-end">
+                                <li class="nav-item"><a class="nav-link"
+                                                            href="{{ url_for('login') }}"
+                                                        style="margin-right: 4px;font-family: Alata, sans-serif;color: white;">Login</a></li>
+                                <li><a href="{{ url_for('sign_up') }}"><button class="btn btn-primary" type="button" style="background-color: #25AAE2;font-family: Alata, sans-serif;">Sign Up</button></a></li>
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="landing-page-below-navbar">
+            <div id="landing-page-content-area">
+                <h1 id="landing-page-top-heading">DevOps Thrills</h1><span id="landing-page-bottom-heading"><span style="color: rgb(198, 201, 204);">Learn, Create, Conquer the fun</span></span>
+                <div id="landing-page-area-under-heading">
+                    <div id="landing-page-area-of-courses-links">
+                        <div class="flex-grow-1 flex-shrink-1 text-center" id="landing-page-extra-div">
+                            <div id="landing-page-upper-column-div" class="row row-cols-2 row-cols-lg-3 g-2 g-lg-2 justify-content-end"><a href="#">
+                                    <div class="pulse animated infinite col" id="landing-page-rocket-mans-settings"><img src="\static\img1\rocketman.png" width="300" height="300"></div>
+                                </a></div>
+                        </div>
+                    </div>
+                    <footer class="text-center bg-dark vh-10" id="landing-page-footer">
+                        <div class="container text-white py-4 py-lg-5"><img id="landing-page-wave-image" src="\static\img1\waves.svg"></div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="\static\bootstrap1\js1\bootstrap.min.js"></script>
+    <script src="\static\js1\bs-init.js"></script>
+</body>
+
+</html>
